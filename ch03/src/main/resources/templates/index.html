@@ -29,8 +29,48 @@
     <span th:case="true">user2는 20세 이상입니다.</span>
     <span th:case="false">user2는 20세 미만입니다.</span>
   </p>
+
   <h4>타임리프 값 반복문</h4>
+  <ul>
+    <li th:each="num : ${#numbers.sequence(1, 10)}">
+      <span th:text="${num}"></span>
+    </li>
+  </ul>
+  <table border="1">
+    <tr>
+      <th>아이디</th>
+      <th>이름</th>
+      <th>생년월일</th>
+      <th>나이</th>
+    </tr>
+    <tr th:each="user : ${userDTOList}">
+      <td>[[${user.userid}]]</td>
+      <td>[[${user.name}]]</td>
+      <td>[[${user.birth}]]</td>
+      <td>[[${user.age}]]</td>
+    </tr>
+  </table>
+
   <h4>타임리프 값 링크</h4>
+  <a th:href="@{/sub1/hello}">hello</a>
+  <a th:href="@{/sub1/welcome}">welcome</a>
+  <a th:href="@{/sub1/greeting}">greeting</a>
+
   <h4>스프링부트 include</h4>
+
+  <th:block th:include="/inc/header.html"/>
+  <th:block th:include="/inc/tail.html"/>
+
+  <th:block th:include="~{/inc/header.html}"/>
+  <th:block th:include="~{/inc/tail.html}"/>
+
+  <div th:insert="~{/inc/header.html}"></div>
+  <div th:insert="~{/inc/tail.html}"></div>
+
+  <div th:replace="~{/inc/header.html}"></div>
+  <div th:replace="~{/inc/tail.html}"></div>
+
+  <h4>폼 전송</h4>
+  <a th:href="@{/sub2/register}">폼 전송</a>
 </body>
 </html>

@@ -1,10 +1,14 @@
 package org.example.ch03.controller;
 
+import org.apache.catalina.User;
 import org.example.ch03.DTO.UserDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.context.request.RequestContextHolder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class IndexController {
@@ -37,6 +41,11 @@ public class IndexController {
                                 .age(22)
                                 .build();
 
+        // 리스트 생성
+        List<UserDTO> dtoList = new ArrayList<>();
+        dtoList.add(user1);
+        dtoList.add(user2);
+        dtoList.add(user3);
 
         // Model 참조: Controller 컴포넌트 데이터를 View(HTML)에서 참조
         model.addAttribute("num1", num1);
@@ -46,6 +55,7 @@ public class IndexController {
         model.addAttribute("user1", user1);
         model.addAttribute("user2", user2);
         model.addAttribute("user3", user3);
+        model.addAttribute(dtoList);
 
         return "/index";
     }
