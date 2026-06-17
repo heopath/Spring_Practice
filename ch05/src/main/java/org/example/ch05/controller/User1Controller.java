@@ -38,8 +38,6 @@ public class User1Controller {
 
     @PostMapping("/user1/register")
     public String register(User1DTO dto){
-        System.out.println(dto);
-        
         // 등록 서비스 호출
         service.register(dto);
 
@@ -49,8 +47,6 @@ public class User1Controller {
 
     @GetMapping("/user1/modify")
     public String modify(String userid, Model model){
-        System.out.println(userid);
-
         // 수정 조회 서비스 호출
         User1DTO dto = service.getById(userid);
 

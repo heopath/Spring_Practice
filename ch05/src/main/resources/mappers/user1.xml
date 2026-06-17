@@ -6,11 +6,11 @@
 <mapper namespace="org.example.ch05.DAO.User1DAO">
 
     <!-- id값은 DAO의 메서드명으로 맞춰줌 -->
-    <select id="select">
+    <select id="select" resultType="org.example.ch05.DTO.User1DTO">
         SELECT * FROM User1 WHERE userid=#{userid};
     </select>
 
-    <select id="selectAll">
+    <select id="selectAll" resultType="org.example.ch05.DTO.User1DTO">
         SELECT * FROM User1;
     </select>
 
