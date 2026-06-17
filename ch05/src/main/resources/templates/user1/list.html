@@ -7,7 +7,7 @@
 	<body>
 		<h3>User1 목록</h3>
 		<a th:href="@{/}">메인</a>
-		<a th:href="@{/user1/register}" method="post">등록</a>
+		<a th:href="@{/user1/register}">등록</a>
 		<table border="1">
 			<tr>
 				<th>아이디</th>
@@ -16,14 +16,14 @@
 				<th>나이</th>
 				<th>관리</th>
 			</tr>
-			<tr>
-				<td>asdfsda</td>
-				<td>dfdg</td>
-				<td>dfdfg</td>
-				<td>dfdfd</td>
+			<tr th:each="dto:${dtoList}">
+				<td>[[${dto.userid}]]</td>
+				<td>[[${dto.name}]]</td>
+				<td th:text="${dto.hp}">휴대폰</td>
+				<td th:text="${dto.age}">나이</td>
 				<td>
-					<a th:href="@{/user1/modify}">수정</a>
-					<a href="">삭제</a>
+					<a th:href="@{/user1/modify(userid=${dto.userid})}">수정</a>
+					<a th:href="@{/user1/remove(userid=${dto.userid})}">삭제</a>
 				</td>
 			</tr>
 		</table>	

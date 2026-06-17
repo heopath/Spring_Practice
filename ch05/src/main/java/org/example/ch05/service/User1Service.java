@@ -1,8 +1,8 @@
 package org.example.ch05.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.ch05.dao.User1DAO;
-import org.example.ch05.dto.User1DTO;
+import org.example.ch05.DAO.User1DAO;
+import org.example.ch05.DTO.User1DTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

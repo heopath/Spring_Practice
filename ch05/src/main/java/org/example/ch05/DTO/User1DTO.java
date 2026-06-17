@@ -1,4 +1,4 @@
-package org.example.ch05.dto;
+package org.example.ch05.DTO;
 
 import lombok.*;
 
