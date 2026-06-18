@@ -253,3 +253,14 @@
 2026-06-18T10:40:16.947+09:00  INFO 9420 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 2026-06-18T10:40:45.783+09:00  INFO 18956 --- [ch04] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2026-06-18T10:40:45.786+09:00  INFO 18956 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18 11:40:12.069 [Test worker] INFO  org.example.ch04.dao.User1DAOTest - Starting User1DAOTest using Java 21.0.11 with PID 11856 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18 11:40:12.070 [Test worker] DEBUG org.example.ch04.dao.User1DAOTest - Running with Spring Boot v3.5.15, Spring v6.2.19
+2026-06-18 11:40:12.072 [Test worker] INFO  org.example.ch04.dao.User1DAOTest - No active profile set, falling back to 1 default profile: "default"
+2026-06-18 11:40:13.696 [Test worker] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2026-06-18 11:40:14.158 [Test worker] INFO  org.example.ch04.dao.User1DAOTest - Started User1DAOTest in 2.563 seconds (process running for 4.075)
+2026-06-18 11:40:14.990 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-18 11:40:15.242 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2066e897
+2026-06-18 11:40:15.245 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-18 11:40:15.387 [Test worker] INFO  org.example.ch04.dao.User1DAOTest - User1DTO(userid=test01, name=테스트, hp=010-1111-2223, age=33)
+2026-06-18 11:40:15.456 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-18 11:40:15.495 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
