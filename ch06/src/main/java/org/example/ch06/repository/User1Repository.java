@@ -10,8 +10,4 @@ import org.springframework.stereotype.Repository;
 public interface User1Repository extends JpaRepository<User1, String> {
     // JpaRepository<T, ID> : 사용하는 엔티티와 해당 엔티티의 @ID 컬럼 속성 타입
 
-
-
-
-
 }

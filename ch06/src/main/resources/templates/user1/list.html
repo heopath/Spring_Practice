@@ -22,8 +22,8 @@
 		<td th:text="${dto.hp}">휴대폰</td>
 		<td th:text="${dto.age}">나이</td>
 		<td>
-			<a th:href="@{/user1/modify}">수정</a>
-			<a th:href="@{/user1/remove}">삭제</a>
+			<a th:href="@{/user1/modify(userid=${dto.userid})}">수정</a>
+			<a th:href="@{/user1/remove(userid=${dto.userid})}">삭제</a>
 		</td>
 	</tr>
 </table>

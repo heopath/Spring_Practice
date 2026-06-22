@@ -49,7 +49,38 @@ public class User1Controller {
 
 
     @GetMapping("/user1/modify")
-    public String modify(){
+    public String modify(Model model, String userid){
+        log.info(userid);
+
+        // 서비스 호출
+        User1DTO dto = service.getUser(userid);
+        log.info(dto.toString());
+
+        // 모델 참조
+        model.addAttribute(dto); // 키값을 생략하면 소문자로 시작하는 객체 타입이 이름이 됨
+
         return "/user1/modify";
+    }
+
+    @PostMapping("/user1/modify")
+    public String modify(User1DTO dto){
+        log.info(dto.toString());
+
+        // 서비스 호출
+        service.modify(dto);
+
+        // 목록 이동
+        return "redirect:/user1/list?modify=success";
+    }
+
+    @GetMapping("/user1/remove")
+    public String remove(String userid){
+        log.info(userid);
+
+        // 서비스 호출
+        service.remove(userid);
+
+        // 목록 이동
+        return "redirect:/user1/list?remove=success";
     }
 }
