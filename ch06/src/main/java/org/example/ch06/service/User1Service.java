@@ -50,8 +50,8 @@ public class User1Service {
 
         // DTO 리스트 변환
         List<User1DTO> dtoList = entityList.stream()
-                .map(entity -> entity.toDTO())
-                .toList();
+                                    .map(entity -> entity.toDTO())
+                                    .toList();
 
         return dtoList;
     }

@@ -1,5 +1,6 @@
 package org.example.ch06.dto.board;
 
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,13 +10,26 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Builder
-@Entity
-@Table(name = "boared_File")
 public class FileDTO {
 
     private int fno;
-    private int ano;
-    private String fName;
+
+    private int ano; // 해당파일이 첨부된 글번호
+
     private String ofName;
+    private String sfName;
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

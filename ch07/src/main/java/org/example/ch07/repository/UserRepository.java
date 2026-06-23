@@ -1,7 +1,6 @@
-package org.example.ch06.repository.board;
+package org.example.ch07.repository;
 
-import org.example.ch06.entity.board.Article;
-import org.example.ch06.entity.board.User;
+import org.example.ch07.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

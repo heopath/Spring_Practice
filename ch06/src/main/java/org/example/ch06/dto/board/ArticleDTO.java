@@ -13,20 +13,13 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 @Builder
-@Entity
-@Table(name = "boared_Article")
 public class ArticleDTO {
 
     private int ano;
-
     private String title;
-
-    private String writer;
-
     private String content;
-
+    private String writer;
     private int file;
-
     private String wdate;
 
 }
