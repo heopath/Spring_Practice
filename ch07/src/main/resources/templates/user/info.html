@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>사용자 정보</title>
+</head>
+<body>
+<h3>사용자 정보</h3>
+
+<a th:href="@{/}">메인</a>
+<a th:href="@{/user/logout}">로그아웃</a>
+
+<p>
+	아이디 : <span>[[${user.userid}]]</span><br>
+	이름 : <span>[[${user.name}]]</span><br>
+	생년월일 : <span>[[${user.birth}]]</span><br>
+	나이 : <span>[[${user.age}]]</span><br>
+	회원등급 : <span>[[${user.role}]]</span><br>
+	가입일 : <span>[[${user.rdate}]]</span><br>
+</p>
+</body>
+</html>
