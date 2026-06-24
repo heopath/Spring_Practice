@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 <head>
 	<meta charset="UTF-8">
 	<title>사용자 정보</title>
@@ -11,12 +11,12 @@
 <a th:href="@{/user/logout}">로그아웃</a>
 
 <p>
-	아이디 : <span>[[${user.userid}]]</span><br>
-	이름 : <span>[[${user.name}]]</span><br>
-	생년월일 : <span>[[${user.birth}]]</span><br>
-	나이 : <span>[[${user.age}]]</span><br>
-	회원등급 : <span>[[${user.role}]]</span><br>
-	가입일 : <span>[[${user.rdate}]]</span><br>
+	아이디 : <span>[[${apple.userid}]]</span><br>
+	이름 : <span>[[${apple.name}]]</span><br>
+	생년월일 : <span sec:authentication="principal.user.birth">생년월일</span><br>
+	나이 : <span>[[${apple.age}]]</span><br>
+	회원등급 : <span>[[${apple.role}]]</span><br>
+	가입일 : <span>[[${apple.rdate}]]</span><br>
 </p>
 </body>
 </html>

@@ -32,12 +32,10 @@ public class UserController {
 
     @PostMapping("/user/register")
     public String register(UserDTO dto){
-
         UserDTO savedUser = userService.register(dto);
-
-
         return "redirect:/user/login?register=success";
     }
+
     @GetMapping("/user/info")
     public String info(Model model){
 
@@ -48,8 +46,10 @@ public class UserController {
         MyUserDetails details = (MyUserDetails) authentication.getPrincipal();
         User user = details.getUser();
 
-        model.addAttribute(user);
+        model.addAttribute("apple", user);
 
         return "/user/info";
     }
+
+
 }
