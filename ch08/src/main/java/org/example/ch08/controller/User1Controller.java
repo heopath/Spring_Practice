@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 @Log4j2
 @RequiredArgsConstructor
 @RestController
@@ -63,6 +64,19 @@ public class User1Controller {
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(dtoList);
+    }
+    @GetMapping("/user1/{userid}")
+    public ResponseEntity<User1DTO> view(@PathVariable("userid") String userid){
+        log.info(userid);
+
+        User1DTO dto = service.getUser(userid);
+
+        if(dto != null) {
+            return ResponseEntity.ok(dto); // 200 OK와 함께 데이터 반환
+        }
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND) // 데이터를 못 찾으면 404 에러 반환
+                .build();
     }
 
     //@ResponseBody
